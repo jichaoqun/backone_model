@@ -142,7 +142,7 @@ class ResNet(nn.Module):
             # 256 -> 512
             self.layer4 = self.make_layer(in_places=256, places=512, block=blocks[3], stride=2)
 
-            self.fc = nn.Linear(3584, num_classes)
+            self.fc = nn.Linear(512, num_classes)
 
         # 对应深层网络结构
         if self.blockkinds == Bottleneck:
